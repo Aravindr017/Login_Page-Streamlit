@@ -4,8 +4,10 @@ import streamlit as st
 def login():
     st.header("Login Page")
 
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
+    username = st.text_input("Username" , help="Enter your username" , placeholder="admin")
+    password = st.text_input("Password", value="admin123", help="Enter your password", placeholder="admin123")
+
+    st.info('Please enter above username and password to login. (Hint: admin/admin123)')
 
     if st.button("Login"):
         if username == "admin" and password == "admin123":
