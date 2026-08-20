@@ -8,7 +8,7 @@ def login():
     password = st.text_input("Password", type="password")
 
     if st.button("Login"):
-        if username == "aravind-admin" and password == "aravind123":
+        if username == "admin" and password == "admin123":
             st.session_state["logged_in"] = True
             st.rerun()
         else:
@@ -17,61 +17,11 @@ def login():
 
 def show_dashboard():
 
-    st.title("Portugal Election 2019")
+    st.title("Welcome!")
 
-    st.write(
-        "Welcome to the Portugal Election 2019 Dashboard!"
-    )
+    st.success("Login successful! 🎉")
 
-    st.write(
-        "This dashboard provides insights and visualizations "
-        "related to the 2019 elections in Portugal."
-    )
-
-    st.write(
-        "Use the sidebar to navigate between different sections "
-        "of the dashboard."
-    )
-
-    st.sidebar.title("Navigation")
-
-    section = st.sidebar.selectbox(
-        "Section",
-        ["Overview", "Results", "Analysis"]
-    )
-
-    if section == "Overview":
-
-        st.header("Overview")
-
-        st.write(
-            "This section provides an overview of the 2019 elections "
-            "in Portugal, including key statistics and information "
-            "about the electoral process."
-        )
-
-    elif section == "Results":
-
-        st.header("Results")
-
-        st.write(
-            "This section presents the election results, including "
-            "vote counts, percentages, and visualizations of the data."
-        )
-
-    elif section == "Analysis":
-
-        st.header("Analysis")
-
-        st.write(
-            "This section offers in-depth analysis of the election "
-            "results, including trends, comparisons, and insights "
-            "derived from the data."
-        )
-
-    st.write(
-        "Thank you for visiting the Portugal Election 2019 Dashboard!"
-    )
+    st.write("Welcome to the application. You can now access the dashboard.")
 
 
 def main():
