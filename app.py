@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st      # streamlit library for building web apps
 
 
 def login():
