@@ -91,7 +91,7 @@ def main():
     else:
         login()
         
-    # Logout button    
+    # Logout button    - dashboard
     if st.sidebar.button("Logout"):
         st.session_state["logged_in"] = False
         st.rerun()
