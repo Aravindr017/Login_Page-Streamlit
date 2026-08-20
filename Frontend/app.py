@@ -90,6 +90,11 @@ def main():
         show_dashboard()
     else:
         login()
+        
+    # Logout button    
+    if st.sidebar.button("Logout"):
+        st.session_state["logged_in"] = False
+        st.rerun()
 
 
 if __name__ == "__main__":
